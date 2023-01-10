@@ -1,13 +1,18 @@
 from random import sample
 
+
 def s(list_, target):
-    count = 0
-    for i in list_:
-        if i != target:
-            count += 1
+    left, right = 0, len(list_) - 1
+    while left <= right:
+        middle = (left + right) // 2
+        if list_[middle] < target:
+            left = middle + 1
+        elif list_[middle] > target:
+            right = middle - 1
         else:
-            break
-    return count
+            return middle
+    return
+
 
 if __name__ == "__main__":
     list_len = 10
@@ -20,10 +25,9 @@ if __name__ == "__main__":
             print("Invalid input")
         else:
             print(f'List: {rand_list}')
-            if target_index == list_len:
+            if target_index is None:
                 print(f'Cannot find {target} in the list')
             else:
                 print(f'Found {target} in index {target_index}')
     except ValueError:
         print("Invalid input")
-
