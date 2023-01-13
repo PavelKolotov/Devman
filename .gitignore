@@ -28,7 +28,7 @@ Icon
 .AppleDesktop
 Network Trash Folder
 Temporary Items
-.apdisk
+.apdiskзнсрфкь
 
 ### macOS Patch ###
 # iCloud generated files
@@ -37,3 +37,4 @@ Temporary Items
 # End of https://www.toptal.com/developers/gitignore/api/macos
 venv
 .idea
+.env
